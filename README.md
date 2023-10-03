@@ -1,4 +1,4 @@
-# Hacktoberfest 2023 : Music-Player-RecEngine 🚀
+# Hacktoberfest 2023 : BeatBridge 🚀
 
 ### `STAR`⭐ The Repository `OPEN FIRST` Pull Request & `Get it Merged!` 🎉
 🗣 **Hacktoberfest encourages participation in the open source community, which grows bigger every year. Complete the challenge and earn a limited edition rewards!🚀**
