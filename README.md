@@ -34,7 +34,15 @@ This project is licensed under the **[MIT License](LICENSE)**
 
 ### Let's make Hacktoberfest 2023 amazing together! Happy coding! 🎉
 
-## Our Valuable Contributors of `Hacktoberfest 2023`
+## 😍 Our Valuable Contributors
+
+Thanks to these wonderful people ✨
+
+<a href="https://github.com/pooranjoyb/BeatBridge/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=pooranjoyb/BeatBridge" />
+</a>
+
+💙 Happy Contributions !! 💙
 
 ### Created using Vite + React
 Currently, two official plugins are available:
