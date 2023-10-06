@@ -33,7 +33,7 @@ export default function Home() {
 
           <div className="mt-24">
             <p className="font-bold text-3xl tracking-tight">
-              Where Music Speaks
+            Your Gateway to a World of Rhythm
             </p>
             <p className="text-8xl font-bold mt-1 tracking-tighter">
               Welcome to BeatBridge!
