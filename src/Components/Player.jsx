@@ -1,9 +1,11 @@
 import React from "react";
+import "../App.css";
+import Background from "/Background.png";
 
 export default function Player() {
   return (
     <>
-      <div className="w-full bg-white">
+      <div className="w-full bg-cover bg-center" style={{backgroundImage:`url(${Background})` }}>
         <div class="max-w-md mx-auto">
           <div class="flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white">
             <div class="grid place-items-center h-full w-12 text-gray-300">
@@ -82,7 +84,7 @@ export default function Player() {
                       <path d="M4 5h3v10H4V5zm12 0v10l-9-5 9-5z" />
                     </svg>
                   </div>
-                  <div className="text-white p-8 rounded-full bg-red-light shadow-lg">
+                  <div className="text-grey-darker p-8 rounded-full bg-red-light shadow-lg">
                     <svg
                       className="w-8 h-8"
                       fill="currentColor"
