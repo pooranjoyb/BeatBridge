@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <div className="relative">
         <div className="absolute inset-0 bg-cover bg-center">
-          <img src={Background} alt="bg img" className="min-h-screen" />
+          <img src={Background} alt="bg img" className="w-full" />
         </div>
 
         <div className="absolute inset-0 items-center text-center justify-center text-white">
