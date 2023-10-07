@@ -1,15 +1,13 @@
-import React from "react";
-
 export default function Player() {
   return (
     <>
-      <div className="w-full bg-white">
-        <div class="max-w-md mx-auto">
-          <div class="flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white">
-            <div class="grid place-items-center h-full w-12 text-gray-300">
+      <div className="w-full bg-white font-josh">
+        <div className="max-w-md mx-auto">
+          <div className="flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white">
+            <div className="grid place-items-center h-full w-12 text-gray-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -24,7 +22,7 @@ export default function Player() {
             </div>
 
             <input
-              class="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
+              className="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
               type="text"
               id="search"
               placeholder="Search your favourite music..."
