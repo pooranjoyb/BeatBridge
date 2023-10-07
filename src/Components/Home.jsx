@@ -1,16 +1,14 @@
-import React from "react";
 import "../App.css";
 import Background from "/Background.png";
 import Hamburger from "/hamburger.png";
+import FeaturesHomePage from "./FeaturesHomePage";
 
 export default function Home() {
   return (
     <>
-      <div className="relative">
-        <div className="absolute inset-0 bg-cover bg-center">
+        <div className="bg-cover bg-center font-josh">
           <img src={Background} alt="bg img" className="w-full" />
         </div>
-
         <div className="absolute inset-0 items-center text-center justify-center text-white">
           <div className="pt-6 pb-4 flex flex-row justify-between">
             <div className="mx-auto flex flex-row">
@@ -33,7 +31,7 @@ export default function Home() {
 
           <div className="mt-24">
             <p className="font-bold text-3xl tracking-tight">
-            Your Gateway to a World of Rhythm
+              Your Gateway to a World of Rhythm
             </p>
             <p className="text-8xl font-bold mt-1 tracking-tighter">
               Welcome to BeatBridge!
@@ -43,7 +41,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </div>
+        <FeaturesHomePage />
     </>
   );
 }
