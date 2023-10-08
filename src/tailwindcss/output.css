@@ -946,7 +946,7 @@ video {
   }
 }
 .fullscreen-styles {
-  background-image: url('https://tailwindcss.com/img/card-top.jpg');
+  background-image: url("https://tailwindcss.com/img/card-top.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
@@ -957,7 +957,7 @@ video {
 }
 
 .music {
-  background: rgba(255, 255, 255, 0.2); 
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
