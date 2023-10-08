@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
 import Background from "/Background.png";
+import Navbar from "./Navbar";
 export default function Player() {
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [clock, setClock] = useState(new Date());
@@ -47,14 +48,8 @@ export default function Player() {
         className="w-full bg-cover bg-center"
         style={{ backgroundImage: `url(${Background})` }}
       >
-        <div className="text-center text-white">
-          <h1 className="font-normal text-7xl inline mt-5 pr-2">BEAT </h1>
-          <h1 className="inline border-b-4 pt-6 font-serif tracking-tight border-white text-5xl">
-            Bridge
-          </h1>
-        </div>
-
-        <div className="absolute inset-0 mt-48">
+        <Navbar/>
+        <div className="absolute inset-0 mt-32">
           <div class="mx-auto w-[50rem] shadow-lg">
             <div class="flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white">
               <div class="grid place-items-center h-full w-12 text-gray-300">
