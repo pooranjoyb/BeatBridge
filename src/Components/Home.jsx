@@ -1,4 +1,5 @@
 import Background from "/Background.png";
+import PageThree from "./PageThree";
 import Features from "./Features";
 import Navbar from "./Navbar";
 
@@ -23,8 +24,9 @@ export default function Home() {
           </button>
         </div>
       </div>
-      
+ 
       <Features />
+      <PageThree /> 
     </>
   );
 }
