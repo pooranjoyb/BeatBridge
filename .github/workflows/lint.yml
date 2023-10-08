@@ -1,5 +1,6 @@
 name: Lint
 
+
 on:
   # Trigger the workflow on push or pull request,
   # but only for the main branch
@@ -12,10 +13,13 @@ on:
       - main
       - master
 
+
 jobs:
   run-linters:
     name: Run linters
     runs-on: ubuntu-latest
+
+    permissions: write-all
 
     steps:
       - name: Check out Git repository
