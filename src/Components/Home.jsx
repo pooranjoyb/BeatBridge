@@ -7,6 +7,7 @@ import { FaHome } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { FaHashtag } from "react-icons/fa";
+import PageThree from "./PageThree";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -110,6 +111,7 @@ export default function Home() {
         </ul>
       </div>
       <FeaturesHomePage />
+      <PageThree />
     </>
   );
 }
