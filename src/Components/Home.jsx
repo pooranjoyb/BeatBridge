@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 import Background from "/Background.png";
 import Hamburger from "/hamburger.png";
-import FeaturesHomePage from "./FeaturesHomePage";
+import Features from "./Features";
 import { FaHome } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
 import { BsFillPeopleFill } from "react-icons/bs";
@@ -21,30 +21,30 @@ export default function Home() {
   return (
     <>
       <div className="bg-cover bg-center font-josh">
-        <img src={Background} alt="bg img" className="w-full" />
+        <img src={Background} alt="background img" className="mt-[-2%] w-[100%]" />
       </div>
       <div className="absolute inset-0 items-center text-center justify-center text-white">
-        <div className="pt-6 pb-4 flex flex-row justify-between">
-          <div className="mx-auto flex flex-row">
-            <h1 className="font-normal text-7xl inline mt-5 ml-24 pr-2">
+        <div className="pt-1 pb-1 flex flex-row justify-between">
+          <div className="mx-auto flex flex-row mb-2">
+            <h1 className="font-normal text-4xl inline mt-1 ml-24 pr-2">
               BEAT{" "}
             </h1>
-            <h1 className="inline border-b-4 pt-6 font-serif tracking-tight border-white text-5xl">
+            <h1 className="inline border-b-4 pt-2 font-serif tracking-tight border-white text-2xl">
               Bridge
             </h1>
           </div>
-          <div className="pr-8 pt-4">
+          <div className="pr-8 pt-2">
             <img
               src={Hamburger}
               alt="hamburger menu"
-              className="w-[65px] h-[65px]  cursor-pointer"
+              className="w-8 h-8  cursor-pointer"
               onClick={toggleMenu}
             />
           </div>
         </div>
         <hr className="border-y-[1px]" />
 
-        <div className="mt-24">
+        <div className="mt-48">
           <p className="font-bold text-3xl tracking-tight">
             Your Gateway to a World of Rhythm
           </p>
@@ -109,7 +109,7 @@ export default function Home() {
           </li>
         </ul>
       </div>
-      <FeaturesHomePage />
+      <Features />
     </>
   );
 }
