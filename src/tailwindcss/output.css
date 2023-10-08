@@ -685,6 +685,14 @@ video {
   height: 100vh;
 }
 
+.h-\[800px\]{
+  height: 800px;
+}
+
+.h-\[1000px\]{
+  height: 1000px;
+}
+
 .w-12{
   width: 3rem;
 }
@@ -781,6 +789,10 @@ video {
 
 .rounded-lg{
   border-radius: 0.5rem;
+}
+
+.border{
+  border-width: 1px;
 }
 
 .border-y-\[1px\]{
