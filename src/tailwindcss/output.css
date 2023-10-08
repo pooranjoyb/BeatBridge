@@ -1158,17 +1158,6 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-@media (min-width: 768px) {
-  .md\:block {
-    display: block;
-  }
-}
-.fullscreen-styles {
-  background-image: url("https://tailwindcss.com/img/card-top.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
-  
 .ease-in-out{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1179,14 +1168,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.music {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  width: 60%;
-  margin: auto;
-  padding: 20px;
 .hover\:bg-gray-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
