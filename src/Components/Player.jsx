@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../App.css";
 import Background from "/Background.png";
 import Navbar from "./Navbar";
@@ -50,9 +50,9 @@ export default function Player() {
       >
         <Navbar/>
         <div className="absolute inset-0 mt-32">
-          <div class="mx-auto w-[50rem] shadow-lg">
-            <div class="flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white">
-              <div class="grid place-items-center h-full w-12 text-gray-300">
+          <div className="mx-auto w-[50rem] shadow-lg">
+            <div className="flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white">
+              <div className="grid place-items-center h-full w-12 text-gray-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -61,16 +61,16 @@ export default function Player() {
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                   />
                 </svg>
               </div>
 
               <input
-                class="peer h-full w-full outline-none text-sm text-gray-700 pr-2 rounded-lg"
+                className="peer h-full w-full outline-none text-sm text-gray-700 pr-2 rounded-lg"
                 type="text"
                 id="search"
                 placeholder="Search your favourite music..."
@@ -131,13 +131,13 @@ export default function Player() {
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       stroke="currentColor"
-                      class="w-6 h-6"
+                      className="w-6 h-6"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z"
                       />
                     </svg>

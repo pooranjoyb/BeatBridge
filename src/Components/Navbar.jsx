@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FaHome } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
 import { BsFillPeopleFill } from "react-icons/bs";

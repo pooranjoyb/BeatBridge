@@ -1,7 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
 import Home from "./Components/Home.jsx";
-import Player from "./Components/Player.jsx";
+import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import "./App.css";
@@ -13,7 +13,7 @@ const MyApp = createBrowserRouter([
   },
   {
     path: "/player",
-    element: <Player />,
+    element: <App />,
   },
 ]);
 

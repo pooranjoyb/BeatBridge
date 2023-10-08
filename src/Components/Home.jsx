@@ -1,5 +1,3 @@
-import React from "react";
-import "../App.css";
 import Background from "/Background.png";
 import Features from "./Features";
 import Navbar from "./Navbar";
