@@ -945,3 +945,58 @@ video {
     display: block;
   }
 }
+.fullscreen-styles {
+  background-image: url('https://tailwindcss.com/img/card-top.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.image {
+  display: none;
+}
+
+.music {
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+}
+
+.title {
+  display: grid;
+  grid-template-columns: 7fr 1fr 1fr 1fr;
+  align-items: center;
+  vertical-align: middle;
+  column-gap: 4fr;
+}
+.flex-style {
+  width: 30%;
+  margin: auto;
+  margin-top: 20%;
+}
+.no-clock {
+  display: none;
+}
+
+.clock {
+  position: absolute;
+  display: grid;
+  width: 100%;
+  /* margin-top: 10%; */
+  grid-template-rows: auto auto;
+  text-align: center;
+  /* height: 20%; */
+}
+.time {
+  font-size: 5rem;
+  font-weight: 1000;
+  padding: 0;
+  margin: 0;
+}
+.date {
+  font-size: 2rem;
+}
