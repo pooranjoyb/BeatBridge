@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Guitar from '../assests/guitar.jpg';
+import Guitar from "../assests/guitar.jpg";
 
 export default function FeaturesHomePage() {
   return (
@@ -20,15 +20,24 @@ export default function FeaturesHomePage() {
             <ul className="text-xl list-disc pl-5">
               <li className="text-3xl">Our Mission:</li>
               <ul className="text-2xl font-bold list-disc pl-5">
-                <li className="text-xl">To provide a platform that resonates with every music lover</li>
+                <li className="text-xl">
+                  To provide a platform that resonates with every music lover
+                </li>
               </ul>
             </ul>
-            <Link to={'/player'} className="text-2xl uppercase w-[40%] rounded-r-xl rounded-l-xl px-4 py-2 bg-white text-pink-500 flex justify-center items-center">
+            <Link
+              to={"/player"}
+              className="text-2xl uppercase w-[40%] rounded-r-xl rounded-l-xl px-4 py-2 bg-white text-pink-500 flex justify-center items-center"
+            >
               Get Started
             </Link>
           </div>
           <div className="flex flex-col items-center p-6 relative">
-            <img src={Guitar} className="relative top-[13rem] right-[1.5rem] w-64 h-64 z-10 rounded-full" alt="guitat_img"/>
+            <img
+              src={Guitar}
+              className="relative top-[13rem] right-[1.5rem] w-64 h-64 z-10 rounded-full"
+              alt="guitat_img"
+            />
             <div className="rounded-full w-64 z-0 h-64 bg-violet-800/60"></div>
           </div>
         </div>

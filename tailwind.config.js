@@ -4,10 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        josh: ['Jost', 'sans'],
-      }
+        josh: ["Jost", "sans"],
+      },
     },
   },
   plugins: [],
-}
-
+};
