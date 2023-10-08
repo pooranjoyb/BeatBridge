@@ -6,6 +6,25 @@
 
 📢 **Register [here](https://hacktoberfest.com) for Hacktoberfest and make four pull requests (PRs) between October 1st-31st to get awesome rewards! 🔥.**
 
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+   <br>
+   <img src="https://img.shields.io/github/repo-size/pooranjoyb/BeatBridge?style=for-the-badge" />
+   <img src="https://img.shields.io/github/issues/pooranjoyb/BeatBridge?style=for-the-badge" />
+   <img src="https://img.shields.io/github/issues-closed-raw/pooranjoyb/BeatBridge?style=for-the-badge" />
+    <img src="https://img.shields.io/github/license/pooranjoyb/BeatBridge?style=for-the-badge" />
+
+   <img src="https://img.shields.io/github/issues-pr/pooranjoyb/BeatBridge?style=for-the-badge" />
+    <img src="https://img.shields.io/github/contributors/pooranjoyb/BeatBridge?style=for-the-badge" />
+    <img src="https://img.shields.io/github/stars/pooranjoyb/BeatBridge?style=for-the-badge" />
+  
+   <img src="https://img.shields.io/github/issues-pr-closed-raw/pooranjoyb/BeatBridge?style=for-the-badge" />
+   <img src="https://img.shields.io/github/forks/pooranjoyb/BeatBridge?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/pooranjoyb/BeatBridge?style=for-the-badge" />
+     </div>
+
 <img src="https://github.com/pooranjoyb/React-Aura/blob/master/public/hacktoberfest_icon.png?raw=true" alt="Hacktoberfest2023 Banner"/>
 
 ![Hacktoberfest 2023](https://img.shields.io/badge/Hacktoberfest-2023-blueviolet.svg)
@@ -14,7 +33,7 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-^2.2.19-38B2AC.svg)
 ![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 
-# Music Player with a Recommendation Engine
+# BeatBridge - A Music Player with a Recommendation Engine 🚀
 
 This Web App is a dedicated application that'll use Spotify API to Fetch Songs and play 'em in the interactive GUI.
 

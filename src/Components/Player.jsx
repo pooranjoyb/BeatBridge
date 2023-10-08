@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../App.css";
 import Background from "/Background.png";
+import Navbar from "./Navbar";
 export default function Player() {
   const [isFullScreen, setIsFullScreen] = useState(false);
-  const [clock, setClock] = useState(new Date);
-  
+  const [clock, setClock] = useState(new Date());
+
   const toggleFullScreen = () => {
     const element = document.querySelector(".fullscreen-div");
 
@@ -32,76 +33,83 @@ export default function Player() {
       }
       setIsFullScreen(!isFullScreen);
     }
-  }; 
-  
+  };
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       setClock(new Date());
     }, 1000);
 
     return () => clearInterval(intervalId);
- }, []);
+  }, []);
   return (
     <>
-      <div className="w-full bg-cover bg-center" style={{backgroundImage:`url(${Background})` }}>
-      <div className="text-center text-white">
-              <h1 className="font-normal text-7xl inline mt-5 pr-2">
-                BEAT{" "}
-              </h1>
-              <h1 className="inline border-b-4 pt-6 font-serif tracking-tight border-white text-5xl">
-                Bridge
-              </h1>
-            </div>
-           
-      <div className="absolute inset-0 mt-48">
-     
-      <div class="mx-auto w-[50rem] shadow-lg">
-          <div class="flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white">
-            <div class="grid place-items-center h-full w-12 text-gray-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </div>
+      <div
+        className="w-full bg-cover bg-center"
+        style={{ backgroundImage: `url(${Background})` }}
+      >
+        <Navbar/>
+        <div className="absolute inset-0 mt-32">
+          <div className="mx-auto w-[50rem] shadow-lg">
+            <div className="flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white">
+              <div className="grid place-items-center h-full w-12 text-gray-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </div>
 
-            <input
-              class="peer h-full w-full outline-none text-sm text-gray-700 pr-2 rounded-lg"
-              type="text"
-              id="search"
-              placeholder="Search your favourite music..."
-            />
+              <input
+                className="peer h-full w-full outline-none text-sm text-gray-700 pr-2 rounded-lg"
+                type="text"
+                id="search"
+                placeholder="Search your favourite music..."
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-        
         <div className="flex items-center justify-center h-screen bg-red-lightest">
-          <div className={`fullscreen-div relative ${isFullScreen ? 'fullscreen-styles' : '  bg-white shadow-lg rounded-lg w-[50rem]'}`}>
-            <div className={`${isFullScreen ? 'clock' : 'no-clock'}`}>
+          <div
+            className={`fullscreen-div relative ${
+              isFullScreen
+                ? "fullscreen-styles"
+                : "  bg-white shadow-lg rounded-lg w-[50rem]"
+            }`}
+          >
+            <div className={`${isFullScreen ? "clock" : "no-clock"}`}>
               <div className="time">
-              {clock.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}
+                {clock.toLocaleTimeString([], {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  hour12: true,
+                })}
               </div>
             </div>
-            <div className={`${isFullScreen ? 'flex-style' : 'flex'}`}>
-              <div className={`${isFullScreen ? 'image' : ''}`}>
+            <div className={`${isFullScreen ? "flex-style" : "flex"}`}>
+              <div className={`${isFullScreen ? "image" : ""}`}>
                 <img
                   className="w-full rounded hidden md:block m-2"
                   src="https://tailwindcss.com/img/card-top.jpg"
                   alt="Album Pic"
                 />
               </div>
-              <div className= {`w-full ${isFullScreen ? 'music' : ' p-8 pb-0'}`}>
-                <div className={`${isFullScreen ? 'title' : 'flex justify-between'}`}>
+              <div className={`w-full ${isFullScreen ? "music" : " p-8 pb-0"}`}>
+                <div
+                  className={`${
+                    isFullScreen ? "title" : "flex justify-between"
+                  }`}
+                >
                   <div>
                     <h3 className="text-2xl text-grey-darkest font-medium">
                       A Sky Full of Stars
@@ -119,26 +127,39 @@ export default function Player() {
                     </svg>
                   </div>
                   <div className="text-red-lighter">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" />
-</svg>
-
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z"
+                      />
+                    </svg>
                   </div>
                   <div className="text-red-lighter" onClick={toggleFullScreen}>
-                <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                strokeWidth={1.5} 
-                stroke="currentColor" 
-                className="w-6 h-6">
-               <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
-</svg>
-
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
+                      />
+                    </svg>
                   </div>
-      
                 </div>
-               
+
                 <div className="flex justify-between items-center mt-8">
                   <div className="text-grey-darker">
                     <svg
@@ -191,18 +212,15 @@ export default function Player() {
                     </svg>
                   </div>
                 </div>
-                <div className="flex justify-between text-sm text-grey-darker" >
-                <p>0:40</p>
-                <p>4:20</p>
-               
-              </div>
-                
+                <div className="flex justify-between text-sm text-grey-darker">
+                  <p>0:40</p>
+                  <p>4:20</p>
+                </div>
               </div>
             </div>
-          
           </div>
         </div>
-        </div>
+      </div>
     </>
   );
 }
