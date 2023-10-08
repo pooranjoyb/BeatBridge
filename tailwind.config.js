@@ -2,8 +2,11 @@
 export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        josh: ["Jost", "sans"],
+      },
+    },
   },
   plugins: [],
-}
-
+};
