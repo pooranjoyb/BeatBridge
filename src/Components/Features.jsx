@@ -88,14 +88,24 @@ export default function Features() {
                 </button>
               </Link>
             </motion.div>
-            <div className="flex flex-col items-center justify-center mb-40">
+            <motion.div
+              initial="hidden"
+              animate={sectionControls}
+              exit="hidden"
+              variants={{
+                hidden: { opacity: 0, x: 500 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col items-center justify-center mb-40"
+            >
               <img
                 src="./guitar.png"
                 className="relative top-[13rem] right-[1.5rem] w-64 h-64 z-10 rounded-full"
                 alt="guitat_img"
               />
               <div className="rounded-full w-64 z-0 h-64 bg-violet-800/60"></div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

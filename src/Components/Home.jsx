@@ -1,14 +1,14 @@
+import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Background from "/Background.png";
 import PageThree from "./PageThree";
 import Features from "./Features";
 import Navbar from "./Navbar";
-import { useEffect, useRef } from "react";
 
 export default function Home() {
   const animationControls = {
-    hidden: { opacity: 0, x: -500 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, y: 75 },
+    visible: { opacity: 1, y: 0 },
   };
 
   const sectionRef = useRef(null);
@@ -30,7 +30,7 @@ export default function Home() {
         root: null,
         rootMargin: "0px",
         threshold: 0.5, // Adjust the threshold as needed
-      },
+      }
     );
 
     if (sectionRef.current) {
@@ -46,6 +46,7 @@ export default function Home() {
 
   const sectionControls = useAnimation();
 
+
   return (
     <>
       <div ref={sectionRef} className="bg-cover bg-center font-josh">
@@ -59,10 +60,9 @@ export default function Home() {
         <Navbar />
         <motion.div
           initial="hidden"
-          animate={sectionControls}
-          exit="hidden"
           variants={animationControls}
-          transition={{ duration: 0.5 }}
+          animate={sectionControls}
+          transition={{ duration: 0.5, delay: 0.25 }}
           className="mt-48 text-white"
         >
           <p className="font-bold text-3xl tracking-tight">
