@@ -60,9 +60,7 @@ This project is licensed under the **[MIT License](LICENSE)**
 
 Thanks to these wonderful people ✨
 
-<a href="https://github.com/pooranjoyb/BeatBridge/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=pooranjoyb/BeatBridge" />
-</a>
+<img src="https://contrib.rocks/image?repo=pooranjoyb/BeatBridge" />
 
 💙 Happy Contributions !! 💙
 
