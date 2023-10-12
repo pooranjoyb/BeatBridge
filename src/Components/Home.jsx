@@ -77,6 +77,15 @@ export default function Home() {
         </motion.div>
       </div>
 
+    const progressBar = (
+    <progress
+    className="w-full bg-gray-300"
+    value={currentTime} // Current time of the track
+    max={totalTime}    // Total duration of the track
+    />
+    );
+
+
       <Features />
       <PageThree />
     </>
