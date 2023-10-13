@@ -2,9 +2,28 @@ import { useEffect, useState } from "react";
 import "../App.css";
 import Background from "/Background.png";
 import Navbar from "./Navbar";
-export default function Player() {
+
+export default function Player({ accessToken }) {
+  const [searchInput, setSearchInput] = useState("");
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [clock, setClock] = useState(new Date());
+
+  // Search songs functionality
+  async function search() {
+    var trackParams = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ` + accessToken,
+      },
+    };
+    var trackId = await fetch(
+      "https://api.spotify.com/v1/search?q=" + searchInput + "&type=track",
+      trackParams,
+    )
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }
 
   const toggleFullScreen = () => {
     const element = document.querySelector(".fullscreen-div");
@@ -48,11 +67,11 @@ export default function Player() {
         className="w-full bg-cover bg-center"
         style={{ backgroundImage: `url(${Background})` }}
       >
-        <Navbar/>
+        <Navbar />
         <div className="absolute inset-0 mt-32">
           <div className="mx-auto w-[50rem] shadow-lg">
-            <div className="flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white">
-              <div className="grid place-items-center h-full w-12 text-gray-300">
+            <div className="flex items-center w-full h-12 rounded-lg focus-within:shadow-lg">
+              <div className="grid place-items-center h-full w-12 text-gray-300 bg-white ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -74,14 +93,22 @@ export default function Player() {
                 type="text"
                 id="search"
                 placeholder="Search your favourite music..."
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
               />
+              <button
+                className="mx-4 bg-white rounded-lg py-2 px-6"
+                onClick={search}
+              >
+                Search
+              </button>
             </div>
           </div>
         </div>
 
         <div className="flex items-center justify-center h-screen bg-red-lightest">
           <div
-            className={`fullscreen-div relative ${
+            className={`fullscreen-div relative mt-24${
               isFullScreen
                 ? "fullscreen-styles"
                 : "  bg-white shadow-lg rounded-lg w-[50rem]"
