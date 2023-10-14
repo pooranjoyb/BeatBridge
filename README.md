@@ -34,13 +34,13 @@
 ![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 
 ## Table of Contents
-- [Introduction](#beatbridge---a-music-player-with-a-recommendation-engine-🚀)
+- [BeatBridge Introduction](#beatbridge---a-music-player-with-a-recommendation-engine-🚀)
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Guidelines for Contributions](#guidelines-for-contributions)
   - [Code of Conduct](#code-of-conduct)
   - [License](#license)
-- [List of Contributors](#😍-our-valuable-contributors)
+- [Our Contributors](#😍-our-valuable-contributors)
 
 # BeatBridge - A Music Player with a Recommendation Engine 🚀
 
