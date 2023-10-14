@@ -33,9 +33,28 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-^2.2.19-38B2AC.svg)
 ![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 
+## Table of Contents
+- [Introduction](#beatbridge---a-music-player-with-a-recommendation-engine-🚀)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Guidelines for Contributions](#guidelines-for-contributions)
+  - [Code of Conduct](#code-of-conduct)
+  - [License](#license)
+- [List of Contributors](#😍-our-valuable-contributors)
+
 # BeatBridge - A Music Player with a Recommendation Engine 🚀
 
 This Web App is a dedicated application that'll use Spotify API to Fetch Songs and play 'em in the interactive GUI.
+
+# Features
+
+- Utilizes Spotify API to fetch songs
+- Interactive GUI for playing music
+- Recommendation Engine for suggesting songs
+
+# Getting Started
+
+Follow the guidelines below to contribute to BeatBridge.
 
 ## Guidelines for Contributions
 
