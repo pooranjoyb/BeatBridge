@@ -4,6 +4,7 @@ import Background from "/Background.png";
 import PageThree from "./PageThree";
 import Features from "./Features";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 export default function Home() {
   const animationControls = {
@@ -79,6 +80,7 @@ export default function Home() {
 
       <Features />
       <PageThree />
+      <Footer/>
     </>
   );
 }
