@@ -15,10 +15,10 @@ const Footer = () => {
 
       <div className="right">
         <div className="col-items text-4xl text-white">Services</div>
-        <div className="col-items text-2xl hover:underline">Discover</div>
-        <div className="col-items text-2xl hover:underline">Around You</div>
-        <div className="col-items text-2xl hover:underline">Top Artists</div>
-        <div className="col-items text-2xl hover:underline">Top Charts</div>
+        <div className="col-items text-2xl hover:underline cursor-pointer">Discover</div>
+        <div className="col-items text-2xl hover:underline cursor-pointer">Around You</div>
+        <div className="col-items text-2xl hover:underline cursor-pointer">Top Artists</div>
+        <div className="col-items text-2xl hover:underline cursor-pointer">Top Charts</div>
       </div>
 
     </div>
