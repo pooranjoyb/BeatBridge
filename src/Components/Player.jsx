@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../App.css";
 import Background from "/Background.png";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 export default function Player({ accessToken }) {
   const [searchInput, setSearchInput] = useState("");
@@ -108,11 +109,10 @@ export default function Player({ accessToken }) {
 
         <div className="flex items-center justify-center h-screen bg-red-lightest">
           <div
-            className={`fullscreen-div relative mt-24${
-              isFullScreen
+            className={`fullscreen-div relative mt-24${isFullScreen
                 ? "fullscreen-styles"
                 : "  bg-white shadow-lg rounded-lg w-[50rem]"
-            }`}
+              }`}
           >
             <div className={`${isFullScreen ? "clock" : "no-clock"}`}>
               <div className="time">
@@ -133,9 +133,8 @@ export default function Player({ accessToken }) {
               </div>
               <div className={`w-full ${isFullScreen ? "music" : " p-8 pb-0"}`}>
                 <div
-                  className={`${
-                    isFullScreen ? "title" : "flex justify-between"
-                  }`}
+                  className={`${isFullScreen ? "title" : "flex justify-between"
+                    }`}
                 >
                   <div>
                     <h3 className="text-2xl text-grey-darkest font-medium">
@@ -247,6 +246,8 @@ export default function Player({ accessToken }) {
             </div>
           </div>
         </div>
+
+        <Footer />
       </div>
     </>
   );
