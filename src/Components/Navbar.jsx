@@ -67,9 +67,9 @@ export default function Navbar() {
         className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform ${menuOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform ease-in-out duration-300 z-50`}
       >
-        <div className="flex justify-end p-2">
+        <div className="flex justify-end p-2 z-[60] bg-black">
           <button
-            className="text-gray-500 hover:text-gray-700"
+            className="text-gray-500 hover:text-gray-700 "
             onClick={closeMenu}
           >
             <svg
