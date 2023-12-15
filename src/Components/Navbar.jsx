@@ -1,30 +1,51 @@
-import { useState } from "react";
-import { FaHome } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { FaHome, FaHashtag } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
 import { BsFillPeopleFill } from "react-icons/bs";
-import { FaHashtag } from "react-icons/fa";
 import Hamburger from "/hamburger.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [navbarColor, setNavbarColor] = useState("transparent");
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   };
 
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
+  const handleScroll = () => {
+    setNavbarColor(window.scrollY > 1300 ? "black" : "transparent");
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <div className="inset-0 items-center text-center justify-center text-white fixed top-0 z-50 w-full h-16 bg-gradient-to-r from-pink-300 to-orange-300">
-        <div className="pt-1 pb-1 flex flex-row justify-between">
+      <div className="fixed inset-0 items-center text-center justify-center text-white z-[60] transition-all duration-300 ">
+        <div
+          className={`pt-1 pb-1 flex flex-row justify-between  backdrop-blur-md ${navbarColor}`}
+        >
           <div className="mx-auto flex flex-row mb-2">
-            <h1 className="font-normal text-4xl inline mt-1 ml-24 pr-2">
+            <h1
+              className={`font-normal text-4xl inline mt-1 ml-24 pr-2 ${
+                navbarColor === "black" ? "text-black" : "text-white"
+              }`}
+            >
               BEAT{" "}
             </h1>
-            <h1 className="inline border-b-4 pt-2 font-serif tracking-tight border-white text-2xl">
+            <h1
+              className={`inline border-b-4 pt-2 font-serif tracking-tight border-white text-2xl ${
+                navbarColor === "black" ? "text-black" : "text-white"
+              }`}
+            >
               Bridge
             </h1>
           </div>
@@ -32,27 +53,30 @@ export default function Navbar() {
             <img
               src={Hamburger}
               alt="hamburger menu"
-              className="w-8 h-8  cursor-pointer"
+              className="w-8 h-8  cursor-pointer hover:opacity-75"
               onClick={toggleMenu}
             />
           </div>
         </div>
-        <hr className="border-y-[1px]" />
       </div>
-      {menuOpen && (
-        <div
-          className="fixed inset-0 bg-gray-800 opacity-70 z-50"
-          onClick={closeMenu}
-        ></div>
-      )}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-gradient-to-r from-pink-300 to-orange-300 shadow-lg transform ${
+        className={`fixed top-0 right-0 h-full w-64 shadow-lg transform  ${
           menuOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform ease-in-out duration-300 z-50`}
+        } transition-transform ease-in-out duration-300 z-50  ${
+          navbarColor === "black"
+            ? "text-black bg-gradient-to-r from-pink-400 to-gray-300 "
+            : "text-white bg-gradient-to-r from-pink-300 to-orange-300 "
+        }`}
       >
-        <div className="flex justify-end p-2">
+        <div
+          className={`flex justify-end p-2 z-[60]  ${
+            navbarColor === "black"
+              ? "text-black bg-gradient-to-r from-pink-400 to-gray-300 "
+              : "text-white bg-gradient-to-r from-pink-300 to-orange-300 "
+          }`}
+        >
           <button
-            className="text-gray-500 hover:text-gray-700"
+            className="text-gray-500 hover:text-gray-700 "
             onClick={closeMenu}
           >
             <svg
@@ -72,21 +96,20 @@ export default function Navbar() {
           </button>
         </div>
 
-        <ul className="p-4 font-normals text-xl mb-4">
-          <li className="py-2 pl-4 hover:bg-gray-200 cursor-pointer flex items-center text-white">
+        <ul className="p-4 font-normals text-xl mb-4 ">
+          <li className="py-2 pl-4 cursor-pointer flex items-center transition duration-300 ease-in-out hover:bg-gray-200 hover:text-black">
             <FaHome className="mr-2" />
             Discover
           </li>
-          <li className="py-2 pl-4 hover:bg-gray-200 cursor-pointer flex items-center text-white">
+          <li className="py-2 pl-4 cursor-pointer flex items-center transition duration-300 ease-in-out hover:bg-gray-200 hover:text-black">
             <GrGallery className="mr-2" />
             Around You
-          </li>
-          <li className="py-2 pl-4 hover:bg-gray-200 cursor-pointer flex items-center text-white">
+          </li>{" "}
+          <li className="py-2 pl-4 cursor-pointer flex items-center transition duration-300 ease-in-out hover:bg-gray-200 hover:text-black">
             <BsFillPeopleFill className="mr-2" />
             Top Artists
-          </li>
-          <li className="py-2 pl-4 hover:bg-gray-200 cursor-pointer flex items-center text-white">
-            {" "}
+          </li>{" "}
+          <li className="py-2 pl-4 cursor-pointer flex items-center transition duration-300 ease-in-out hover:bg-gray-200 hover:text-black">
             <FaHashtag className="mr-2" />
             Top Charts
           </li>
