@@ -5,6 +5,7 @@ import PageThree from "./PageThree";
 import Features from "./Features";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const animationControls = {
@@ -19,10 +20,8 @@ export default function Home() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // When the section is in the viewport, trigger the animation
             animationControls.visible && sectionControls.start("visible");
           } else {
-            // When the section is out of the viewport, reset the animation
             animationControls.hidden && sectionControls.start("hidden");
           }
         });
@@ -30,7 +29,7 @@ export default function Home() {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.5, // Adjust the threshold as needed
+        threshold: 0.5,
       }
     );
 
@@ -72,15 +71,17 @@ export default function Home() {
           <p className="text-8xl font-bold mt-1 tracking-tighter">
             Welcome to BeatBridge!
           </p>
-          <button className="rounded-full mt-20 font-bold bg-slate-100 px-6 py-2 shadow-xl hover:shadow-inner transition-all ease-in duration-200 text-2xl text-[#9a3412] tracking-wide">
-            Explore
-          </button>
+          <Link to='/search'>
+            <button className="rounded-full mt-20 font-bold bg-slate-100 px-6 py-2 shadow-xl hover:shadow-inner hover:transition-all ease-in hover:duration-400 text-2xl text-[#9a3412] tracking-wide">
+              Explore
+            </button>
+          </Link>
         </motion.div>
       </div>
 
       <Features />
       <PageThree />
-      <Footer/>
+      <Footer />
     </>
   );
 }

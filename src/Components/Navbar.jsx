@@ -1,10 +1,11 @@
 import { FaHome } from "react-icons/fa";
-import { GrGallery } from "react-icons/gr";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { FaHashtag } from "react-icons/fa";
 import Hamburger from "/hamburger.png";
 import { useState, useEffect } from "react";
-import { BiImages } from "react-icons/bi";
+import { IoIosPlayCircle } from "react-icons/io";
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [navbarColor, setNavbarColor] = useState("transparent");
@@ -28,24 +29,22 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="inset-0 items-center text-center justify-center text-white fixed top-0 z-50 w-full h-16">
+      <div className="font-bold inset-0 items-center text-center justify-center text-white fixed top-0 z-50 w-full h-16">
         <div
           className={`pt-1 pb-1 flex flex-row justify-between  backdrop-blur-md ${navbarColor}`}
         >
           <div className="mx-auto flex flex-row mb-2">
             <h1
-              className={`font-normal text-4xl inline mt-1 ml-24 pr-2 ${
-                navbarColor === "black" ? "text-black" : "text-white"
-              }`}
+              className={`text-4xl inline mt-1 ml-24 pr-2 ${navbarColor === "black" ? "text-black" : "text-white"
+                }`}
             >
               BEAT{" "}
             </h1>
             <h1
-              className={`inline border-b-4 pt-2 font-serif tracking-tight  text-2xl ${
-                navbarColor === "black"
+              className={`inline border-b-4 pt-2  tracking-tight  text-2xl ${navbarColor === "black"
                   ? "text-black border-black"
                   : "text-white border-white"
-              }`}
+                }`}
             >
               Bridge
             </h1>
@@ -59,7 +58,6 @@ export default function Navbar() {
             />
           </div>
         </div>
-        {/* <hr className="border-y-[1px]" /> */}
       </div>
       {menuOpen && (
         <div
@@ -68,20 +66,17 @@ export default function Navbar() {
         ></div>
       )}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform ${
-          menuOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform ease-in-out duration-300 z-50 ${
-          navbarColor === "black"
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform ${menuOpen ? "translate-x-0" : "translate-x-full"
+          } transition-transform ease-in-out duration-300 z-50 ${navbarColor === "black"
             ? "text-black bg-gradient-to-r from-pink-400 to-gray-300 "
             : "text-white bg-gradient-to-r from-pink-300 to-orange-300 "
-        }`}
+          }`}
       >
         <div
-          className={`flex justify-end p-2 z-[60]  ${
-            navbarColor === "black"
+          className={`flex justify-end p-2 z-[60]  ${navbarColor === "black"
               ? "text-black bg-gradient-to-r from-pink-400 to-gray-300 "
               : "text-white bg-gradient-to-r from-pink-300 to-orange-300 "
-          }`}
+            }`}
         >
           <button
             className="text-gray-500 hover:text-gray-700"
@@ -104,43 +99,43 @@ export default function Navbar() {
           </button>
         </div>
 
-        <ul className="p-4 font-serif text-xl mb-4">
+        <ul className="p-4  text-xl mb-4">
           <li
-            className={`py-2 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${
-              navbarColor === "black"
+            className={`py-4 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${navbarColor === "black"
                 ? "hover:bg-gradient-to-r from-pink-500 to-gray-300 "
                 : "hover:bg-gradient-to-r from-pink-400 to-orange-300 "
-            }`}
+              }`}
           >
             <FaHome className="mr-2" />
-            Discover
+            <Link to='/search'>
+              Discover
+            </Link>
           </li>
           <li
-            className={`py-2 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${
-              navbarColor === "black"
+            className={`py-4 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${navbarColor === "black"
                 ? "hover:bg-gradient-to-r from-pink-500 to-gray-300 "
                 : "hover:bg-gradient-to-r from-pink-400 to-orange-300 "
-            }`}
+              }`}
           >
-            <BiImages className="mr-2" />
-            Around You
+            <IoIosPlayCircle className="mr-2" />
+            <Link to='/player'>
+            Music Player
+            </Link>
           </li>
           <li
-            className={`py-2 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${
-              navbarColor === "black"
+            className={`py-4 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${navbarColor === "black"
                 ? "hover:bg-gradient-to-r from-pink-500 to-gray-300 "
                 : "hover:bg-gradient-to-r from-pink-400 to-orange-300 "
-            }`}
+              }`}
           >
             <BsFillPeopleFill className="mr-2" />
             Top Artists
           </li>
           <li
-            className={`py-2 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${
-              navbarColor === "black"
+            className={`py-4 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${navbarColor === "black"
                 ? "hover:bg-gradient-to-r from-pink-500 to-gray-300 "
                 : "hover:bg-gradient-to-r from-pink-400 to-orange-300 "
-            }`}
+              }`}
           >
             {" "}
             <FaHashtag className="mr-2" />

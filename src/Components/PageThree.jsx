@@ -15,10 +15,8 @@ export default function PageThree() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // When the section is in the viewport, trigger the animation
             animationControls.visible && sectionControls.start("visible");
           } else {
-            // When the section is out of the viewport, reset the animation
             animationControls.hidden && sectionControls.start("hidden");
           }
         });
@@ -26,7 +24,7 @@ export default function PageThree() {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.5, // Adjust the threshold as needed
+        threshold: 0.5,
       }
     );
 
@@ -45,7 +43,7 @@ export default function PageThree() {
 
   return (
     <div
-      className="relative h-[800px] font-josh"
+      className="relative h-[800px] "
       style={{ overflow: "hidden" }}
       ref={sectionRef}
     >

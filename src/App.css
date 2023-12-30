@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Raleway:wght@300&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body{
     overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
 }
