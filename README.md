@@ -1,7 +1,10 @@
 # BeatBridge - A Music Player with a Recommendation Engine 🚀
+![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen.svg)
+![React](https://img.shields.io/badge/React-^18.2.0-blue.svg)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-^2.2.19-38B2AC.svg)
+![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 
-This Web App is a dedicated application that'll use Spotify API to Fetch Songs and play 'em in the interactive GUI.
-
+This Web App is a dedicated application that'll use Spotify API to Fetch Songs and play them in the interactive GUI. It Utilizes Spotify API to fetch songs and an interactive GUI for is there for playing music with a recommendation Engine for suggesting songs.
 
 <div align="center">
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
@@ -21,11 +24,14 @@ This Web App is a dedicated application that'll use Spotify API to Fetch Songs a
    <img src="https://img.shields.io/github/forks/pooranjoyb/BeatBridge?style=for-the-badge" />
   <img src="https://img.shields.io/github/last-commit/pooranjoyb/BeatBridge?style=for-the-badge" />
   </div>
-  
-![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen.svg)
-![React](https://img.shields.io/badge/React-^18.2.0-blue.svg)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-^2.2.19-38B2AC.svg)
-![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
+
+<div align="center">
+   
+#### Join Official Discord Server 
+
+<a href="https://discord.com/invite/PHRnze3W87"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"></a>
+
+</div>
 
 ## Table of Contents
 - [BeatBridge Introduction](#beatbridge---a-music-player-with-a-recommendation-engine-🚀)
