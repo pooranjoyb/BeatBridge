@@ -18,17 +18,21 @@ export default function SongSearch() {
     const user = new API_Controller(clientID, secret)
 
     useEffect(() => {
-        getTracks();
-        user.getToken().then((data) => {
+        user?.getToken().then((data) => {
             setToken(data)
         })
+        console.log("Set token ran")
+    }, [])
+
+    useEffect(() => {
+        getTracks();
+        console.log("tracks")
     }, [])
 
     const getTracks = async () => {
         try {
             await user.searchSong(searchInput, token).then((data) => {
                 setTracks(data.tracks.items)
-                console.log(tracks)
             }).catch((err) => {
                 console.log("Fetch Failed " + err)
             })
@@ -53,6 +57,10 @@ export default function SongSearch() {
                             placeholder="Search..."
                             value={searchInput}
                             onChange={(e) => setSearchInput(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter')
+                                    getTracks();
+                            }}
                         />
                         <img onClick={getTracks} src={Search} className="w-12 h-12 cursor-pointer" />
                     </div>
