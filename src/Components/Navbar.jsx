@@ -1,4 +1,5 @@
 import { FaHome } from "react-icons/fa";
+import { FaGlobe } from "react-icons/fa";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { FaHashtag } from "react-icons/fa";
 import Hamburger from "/hamburger.png";
@@ -42,8 +43,8 @@ export default function Navbar() {
             </h1>
             <h1
               className={`inline border-b-4 pt-2  tracking-tight  text-2xl ${navbarColor === "black"
-                  ? "text-black border-black"
-                  : "text-white border-white"
+                ? "text-black border-black"
+                : "text-white border-white"
                 }`}
             >
               Bridge
@@ -74,8 +75,8 @@ export default function Navbar() {
       >
         <div
           className={`flex justify-end p-2 z-[60]  ${navbarColor === "black"
-              ? "text-black bg-gradient-to-r from-pink-400 to-gray-300 "
-              : "text-white bg-gradient-to-r from-pink-300 to-orange-300 "
+            ? "text-black bg-gradient-to-r from-pink-400 to-gray-300 "
+            : "text-white bg-gradient-to-r from-pink-300 to-orange-300 "
             }`}
         >
           <button
@@ -100,32 +101,43 @@ export default function Navbar() {
         </div>
 
         <ul className="p-4  text-xl mb-4">
-          <li
-            className={`py-4 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${navbarColor === "black"
+          <Link to='/'>
+            <li
+              className={`py-4 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${navbarColor === "black"
                 ? "hover:bg-gradient-to-r from-pink-500 to-gray-300 "
                 : "hover:bg-gradient-to-r from-pink-400 to-orange-300 "
-              }`}
-          >
-            <FaHome className="mr-2" />
-            <Link to='/search'>
+                }`}
+            >
+              <FaHome className="mr-2" />
+              Home
+            </li>
+          </Link>
+          <Link to='/search'>
+            <li
+              className={`py-4 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${navbarColor === "black"
+                ? "hover:bg-gradient-to-r from-pink-500 to-gray-300 "
+                : "hover:bg-gradient-to-r from-pink-400 to-orange-300 "
+                }`}
+            >
+              <FaGlobe className="mr-2" />
               Discover
-            </Link>
-          </li>
-          <li
-            className={`py-4 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${navbarColor === "black"
+            </li>
+          </Link>
+          <Link to='/player'>
+            <li
+              className={`py-4 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${navbarColor === "black"
                 ? "hover:bg-gradient-to-r from-pink-500 to-gray-300 "
                 : "hover:bg-gradient-to-r from-pink-400 to-orange-300 "
-              }`}
-          >
-            <IoIosPlayCircle className="mr-2" />
-            <Link to='/player'>
-            Music Player
-            </Link>
-          </li>
+                }`}
+            >
+              <IoIosPlayCircle className="mr-2" />
+              Music Player
+            </li>
+          </Link>
           <li
             className={`py-4 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${navbarColor === "black"
-                ? "hover:bg-gradient-to-r from-pink-500 to-gray-300 "
-                : "hover:bg-gradient-to-r from-pink-400 to-orange-300 "
+              ? "hover:bg-gradient-to-r from-pink-500 to-gray-300 "
+              : "hover:bg-gradient-to-r from-pink-400 to-orange-300 "
               }`}
           >
             <BsFillPeopleFill className="mr-2" />
@@ -133,8 +145,8 @@ export default function Navbar() {
           </li>
           <li
             className={`py-4 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${navbarColor === "black"
-                ? "hover:bg-gradient-to-r from-pink-500 to-gray-300 "
-                : "hover:bg-gradient-to-r from-pink-400 to-orange-300 "
+              ? "hover:bg-gradient-to-r from-pink-500 to-gray-300 "
+              : "hover:bg-gradient-to-r from-pink-400 to-orange-300 "
               }`}
           >
             {" "}

@@ -82,7 +82,7 @@ export default function Features() {
                   </li>
                 </ul>
               </ul>
-              <Link to={"/player"}>
+              <Link to={"/player"} className="w-[27%]">
                 <button className="rounded-full font-bold bg-slate-100 px-6 py-2 shadow-xl hover:shadow-inner transition-all ease-in duration-200 text-2xl text-[#9a3412] tracking-wide">
                   GET STARTED
                 </button>
