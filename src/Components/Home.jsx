@@ -49,30 +49,30 @@ export default function Home() {
 
   return (
     <>
-      <div ref={sectionRef} className="bg-cover bg-center font-josh">
+      <div ref={sectionRef} className="bg-cover bg-center font-josh h-screen">
         <img
           src={Background}
           alt="background img"
-          className="mt-[-2%] w-[100%]"
+          className="w-full h-full object-cover"
         />
       </div>
-      <div className="absolute inset-0 items-center text-center justify-center">
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
         <Navbar />
         <motion.div
           initial="hidden"
           variants={animationControls}
           animate={sectionControls}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-48 text-white"
+          className="mt-8 text-white text-center"
         >
-          <p className="font-bold text-3xl tracking-tight">
+          <p className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight">
             Your Gateway to a World of Rhythm
           </p>
-          <p className="text-8xl font-bold mt-1 tracking-tighter">
+          <p className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mt-1 tracking-tighter">
             Welcome to BeatBridge!
           </p>
           <Link to='/search'>
-            <button className="rounded-full mt-20 font-bold bg-slate-100 px-6 py-2 shadow-xl hover:shadow-inner hover:transition-all ease-in hover:duration-400 text-2xl text-[#9a3412] tracking-wide">
+            <button className="mt-8 px-6 py-3 rounded-full font-bold bg-slate-100 text-2xl text-[#9a3412] hover:bg-slate-200 hover:text-[#9a3412] shadow-xl transition-all ease-in duration-400">
               Explore
             </button>
           </Link>
