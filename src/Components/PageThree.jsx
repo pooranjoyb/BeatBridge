@@ -25,7 +25,7 @@ export default function PageThree() {
         root: null,
         rootMargin: "0px",
         threshold: 0.5,
-      }
+      },
     );
 
     if (sectionRef.current) {
@@ -43,11 +43,11 @@ export default function PageThree() {
 
   return (
     <div
-      className="relative h-[800px] "
+      className="relative w-full sm:h-[800px] md:h-[530px] h-[260px]"
       style={{ overflow: "hidden" }}
       ref={sectionRef}
     >
-      <img src={page3} alt="bg img" className="absolute w-full" style={{ zIndex: 1 }} />
+      <img src={page3} alt="bg img" className="absolute z-0" />
 
       <motion.div
         initial="hidden"
@@ -55,55 +55,20 @@ export default function PageThree() {
         exit="hidden"
         variants={animationControls}
         transition={{ duration: 0.5 }}
-        className="absolute mt-20"
-        style={{ zIndex: 2, top: "20%", left: "10%" }}
+        className="absolute top-10 left-10 z-10"
       >
-        <p
-          style={{
-            fontSize: "5vw",
-            fontWeight: "600",
-            lineHeight: "70px",
-            textAlign: "center",
-          }}
-        >
-          Wanna
+        <p className="text-[5vw]  font-semibold flex flex-col ">
+          <span> Wanna</span> <span>Contribute to </span>
+          <span>BeatBridge?</span>
         </p>
-        <p style={{ fontSize: "5vw", fontWeight: "600", lineHeight: "70px" }}>
-          Contribute to
-        </p>
-        <p
-          style={{
-            fontSize: "5vw",
-            fontWeight: "600",
-            lineHeight: "70px",
-            textAlign: "center",
-          }}
-        >
-          BeatBridge?
-        </p>
-        <div
-          className="absolute"
-          style={{
-            zIndex: 2,
-            backgroundColor: "#FFFFFF00",
-            border: "2px solid black",
-            textAlign: "center",
-            bottom: "-80%",
-            width: "25vw",
-            height: "70px",
-            borderRadius: "50%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+
+        <div className="absolute mt-10 font-bold text-2xl hover:bg-black hover:text-white transition ease-in-out transit border-2  border-black text-black py-2 px-10 text-center rounded-full z-10">
           <a
             rel="noreferrer"
             target="_blank"
             href="https://github.com/pooranjoyb/BeatBridge"
-            style={{ fontSize: "1.2vw", fontWeight: "600" }}
           >
-            github.com/pooranjoyb/BeatBridge
+            <span>GitHub</span>
           </a>
         </div>
       </motion.div>
