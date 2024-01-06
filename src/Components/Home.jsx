@@ -49,12 +49,15 @@ export default function Home() {
   return (
     <>
       <div ref={sectionRef} className="bg-cover bg-center font-josh h-screen">
+      <div ref={sectionRef} className="bg-cover bg-center font-josh h-screen">
         <img
           src={Background}
           alt="background img"
           className="w-full h-full object-cover"
+          className="w-full h-full object-cover"
         />
       </div>
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <Navbar />
         <motion.div
