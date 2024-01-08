@@ -3,6 +3,7 @@ import App from "./App.jsx";
 import Home from "./Components/Home.jsx";
 import ReactDOM from "react-dom/client";
 import SongSearch from "./Components/SongSearch.jsx";
+import TopArtists from "./Components/TopArtists.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import "./App.css";
@@ -19,6 +20,10 @@ const MyApp = createBrowserRouter([
   {
     path: "/search",
     element: <SongSearch />,
+  },
+  {
+    path: "/topartists",
+    element: <TopArtists />,
   },
 ]);
 
