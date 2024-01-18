@@ -142,6 +142,7 @@ export default function Navbar() {
               Music Player
             </li>
           </Link>
+          <Link to="/topartists">
           <li
             className={`py-4 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${
               navbarColor === "black"
@@ -152,6 +153,7 @@ export default function Navbar() {
             <BsFillPeopleFill className="mr-2" />
             Top Artists
           </li>
+          </Link>
           <li
             className={`py-4 pl-4 hover:bg-pink-400 hover:rounded-full cursor-pointer flex items-center  ${
               navbarColor === "black"
