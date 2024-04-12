@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../App.css";
-import Background from "/Background.png";
+import Background from "/bag.jpg";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
@@ -70,35 +70,20 @@ export default function Player({ accessToken }) {
       >
         <Navbar />
         <div className="absolute inset-0 mt-32">
-          <div className="mx-auto w-[50rem] shadow-lg">
-            <div className="flex items-center w-full h-12 rounded-lg focus-within:shadow-lg">
-              <div className="grid place-items-center h-full w-12 text-gray-300 bg-white ">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </div>
+          <div className="mx-auto w-[50rem]">
+            <div className="flex items-center w-full h-12 rounded-lg  ">
+             
 
               <input
-                className="peer h-full w-full outline-none text-sm text-gray-700 pr-2 rounded-lg"
+                className="rounded-full font-bold bg-gradient-to-r from-[#2A2438] to-[#5C5470] px-6 py-2 shadow-xl hover:shadow-inner transition-all ease-in duration-200 text-2xl text-[#000000] tracking-wide"
                 type="text"
                 id="search"
-                placeholder="Search your favourite music..."
+                placeholder="Search your song..."
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
               />
               <button
-                className="mx-4 bg-white rounded-lg py-2 px-6"
+                className="rounded-full font-bold bg-gradient-to-r from-[#2A2438] to-[#5C5470] px-6 py-2  text-[#000000] tracking-wide"
                 onClick={search}
               >
                 Search
@@ -111,7 +96,7 @@ export default function Player({ accessToken }) {
           <div
             className={`fullscreen-div relative mt-24${isFullScreen
                 ? "fullscreen-styles"
-                : "  bg-white shadow-lg rounded-lg w-[50rem]"
+                : " bg-transparent shadow-lg rounded-lg w-[50rem]"
               }`}
           >
             <div className={`${isFullScreen ? "clock" : "no-clock"}`}>

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import page3 from "/page3.png";
+import page3 from "/pg3.png";
 import { motion, useAnimation } from "framer-motion";
 
 export default function PageThree() {
@@ -84,16 +84,14 @@ export default function PageThree() {
           BeatBridge?
         </p>
         <div
-          className="absolute"
+          className="absolute bg-gradient-to-r from-[#2A2438] to-[#5C5470] "
           style={{
             zIndex: 2,
-            backgroundColor: "#FFFFFF00",
-            border: "2px solid black",
             textAlign: "center",
             bottom: "-80%",
-            width: "25vw",
-            height: "70px",
-            borderRadius: "50%",
+            width: "275px",
+            height: "50px",
+            borderRadius: "25px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

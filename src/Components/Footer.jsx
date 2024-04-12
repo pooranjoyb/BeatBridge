@@ -4,9 +4,9 @@ import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="h-16 flex justify-center items-center bg-black  text-custom-pink text-2xl">
+    <div className="h-16 flex justify-center items-center bg-gradient-to-r from-[#352F44] to-[#5C5470] text-custom-[#2A2438] text-2xl">
 
-      <Link to="https://github.com/pooranjoyb/BeatBridge" className="mr-2 hover:scale-125">
+      <Link to="https://github.com/pooranjoyb/BeatBridge" className="mr-2 hover:scale-125 ">
         <FaGithub size={30} />
       </Link>
       <div>&copy; 2023 BeatBridge</div>

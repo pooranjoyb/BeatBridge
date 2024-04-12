@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
-import Background from "/Background.png";
+import Background from "/bag.jpg";
 import PageThree from "./PageThree";
 import Features from "./Features";
 import Navbar from "./Navbar";
@@ -64,7 +64,7 @@ export default function Home() {
           variants={animationControls}
           animate={sectionControls}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-48 text-white"
+          className="mt-48 text-[#000000]"
         >
           <p className="font-bold text-3xl tracking-tight">
             Your Gateway to a World of Rhythm
@@ -72,7 +72,7 @@ export default function Home() {
           <p className="text-8xl font-bold mt-1 tracking-tighter">
             Welcome to BeatBridge!
           </p>
-          <button className="rounded-full mt-20 font-bold bg-slate-100 px-6 py-2 shadow-xl hover:shadow-inner transition-all ease-in duration-200 text-2xl text-[#9a3412] tracking-wide">
+          <button className="rounded-full mt-20 font-bold bg-gradient-to-r from-[#2A2438] to-[#5C5470] px-6 py-2 shadow-xl hover:shadow-inner transition-all ease-in duration-200 text-2xl text-[#000000] tracking-wide">
             Explore
           </button>
         </motion.div>

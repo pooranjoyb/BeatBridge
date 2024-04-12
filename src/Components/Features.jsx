@@ -47,7 +47,7 @@ export default function Features() {
     <>
       <div
         ref={sectionRef}
-        className="text-white bg-gradient-to-r from-[#FF86C8] to-[#FBA277]"
+        className="text-BLACK bg-[#2A2438] "
       >
         <div>
           <div>
@@ -83,7 +83,7 @@ export default function Features() {
                 </ul>
               </ul>
               <Link to={"/player"}>
-                <button className="rounded-full font-bold bg-slate-100 px-6 py-2 shadow-xl hover:shadow-inner transition-all ease-in duration-200 text-2xl text-[#9a3412] tracking-wide">
+                <button className="rounded-full font-bold bg-gradient-to-r from-[#2A2438] to-[#5C5470] px-6 py-2 shadow-xl hover:shadow-inner transition-all ease-in duration-200 text-2xl text-[#000000] tracking-wide">
                   GET STARTED
                 </button>
               </Link>
