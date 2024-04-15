@@ -51,14 +51,14 @@ export default function Features() {
       >
         <div>
           <div>
-            <h1 className="flex font-josh font-bold justify-center text-7xl pt-20">
+            <h1 className="flex font-bold justify-center text-7xl pt-20">
               Ready to make some noise?
             </h1>
-            <div className="flex text-3xl justify-center items-center font-josh">
+            <div className="flex text-3xl justify-center items-center">
               Bringing Harmony to Your Ears.
             </div>
           </div>
-          <div className="flex gap-16 justify-center items-center font-josh">
+          <div className="flex gap-16 justify-center items-center">
             <motion.div
               initial="hidden"
               animate={sectionControls}

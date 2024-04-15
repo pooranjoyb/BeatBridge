@@ -28,6 +28,20 @@ cd BeatBridge
 npm install
 ```
 
+- Setup Environment Variables
+  - Create a file `.env.local` in the root directory.
+  - Go to [Spotify Dashboard](https://developer.spotify.com/dashboard) and Login into your Spotify Account.
+  - Create an App and fill the required details like Name, Description, Website
+  - Make sure to add the Redirect URI to `https://localhost:5173` and check the following API
+  ![image](https://github.com/pooranjoyb/BeatBridge/assets/90945182/0b2e568e-20de-40bd-9f7f-b48740a1a2d4)
+  - Save the Details, Click on the App you just created and go to `Settings`
+  - Copy your `CLIENT_ID` and `CLIENT_SECRET`
+  - Add the following in the `.env.local` file.
+  - ```bash
+    VITE_CLIENT_ID=your_client_id
+    VITE_CLIENT_SECRET=your_client_secret
+    ```
+
 - Start the development server:
 
 ```bash

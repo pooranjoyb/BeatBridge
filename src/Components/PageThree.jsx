@@ -45,7 +45,7 @@ export default function PageThree() {
 
   return (
     <div
-      className="relative h-[800px] font-josh bg-[#2A2438]"
+      className="relative h-[800px] bg-[#2A2438]"
       style={{ overflow: "hidden" }}
       ref={sectionRef}
     >

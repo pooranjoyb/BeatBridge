@@ -5,6 +5,7 @@ import PageThree from "./PageThree";
 import Features from "./Features";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const animationControls = {
@@ -19,10 +20,8 @@ export default function Home() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // When the section is in the viewport, trigger the animation
             animationControls.visible && sectionControls.start("visible");
           } else {
-            // When the section is out of the viewport, reset the animation
             animationControls.hidden && sectionControls.start("hidden");
           }
         });
@@ -30,8 +29,8 @@ export default function Home() {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.5, // Adjust the threshold as needed
-      }
+        threshold: 0.5,
+      },
     );
 
     if (sectionRef.current) {
@@ -47,23 +46,22 @@ export default function Home() {
 
   const sectionControls = useAnimation();
 
-
   return (
     <>
-      <div ref={sectionRef} className="bg-cover bg-center font-josh">
+    <Navbar />
+      <div ref={sectionRef} className="bg-cover bg-center font-josh h-screen">
         <img
           src={Background}
           alt="background img"
-          className="mt-[-2%] w-[100%]"
+          className="w-full h-full object-cover"
         />
       </div>
-      <Navbar />
       <motion.div
         initial="hidden"
         variants={animationControls}
         animate={sectionControls}
         transition={{ duration: 0.5, delay: 0.25 }}
-        className=" absolute inset-0 items-center text-center justify-center mt-48 text-[#f3ead3] z-50"
+        className="absolute inset-0 items-center text-center justify-center mt-48 text-[#f3ead3] z-50"
       >
         <p className="font-bold text-3xl tracking-tight">
           Your Gateway to a World of Rhythm
@@ -71,9 +69,11 @@ export default function Home() {
         <p className="text-8xl font-bold mt-1 tracking-tighter">
           Welcome to BeatBridge!
         </p>
-        <button className="rounded-full mt-20 font-bold bg-gradient-to-r from-[#2A2438] to-[#5C5470] px-6 py-2 shadow-xl hover:shadow-inner transition-all ease-in duration-200 text-2xl text-[#f3ead3] tracking-wide">
-          Explore
-        </button>
+        <Link to='/search'>
+          <button className="rounded-full mt-20 font-bold bg-gradient-to-r from-[#2A2438] to-[#5C5470] px-6 py-2 shadow-xl hover:shadow-inner transition-all ease-in duration-200 text-2xl text-[#f3ead3] tracking-wide">
+            Explore
+          </button>
+        </Link>
       </motion.div>
 
       <Features />

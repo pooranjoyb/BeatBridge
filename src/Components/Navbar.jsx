@@ -19,7 +19,7 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="absolute inset-0 items-center text-center justify-center z-50">
+            <div className="items-center text-center justify-center z-50 bg-[#2A2438]">
                 <div className="pt-1 pb-1 flex flex-row justify-between">
                     <div className="mx-auto flex flex-row mb-2">
                         <h1 className="font-normal text-4xl inline mt-1 ml-24 pr-2 text-[#f3ead3]">
@@ -97,5 +97,3 @@ export default function Navbar() {
         </>
     )
 }
-
-
