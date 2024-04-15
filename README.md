@@ -1,58 +1,40 @@
-# BeatBridge - A Music Player with a Recommendation Engine 🚀
-![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen.svg)
-![React](https://img.shields.io/badge/React-^18.2.0-blue.svg)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-^2.2.19-38B2AC.svg)
-![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
+## BeatBridge - A Music Player with a Recommendation Engine 🚀
 
 This Web App is a dedicated application that'll use Spotify API to Fetch Songs and play them in the interactive GUI. It Utilizes Spotify API to fetch songs and an interactive GUI for is there for playing music with a recommendation Engine for suggesting songs.
 
 <div align="center">
-<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
-<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
-<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
    <br>
-   <img src="https://img.shields.io/github/repo-size/pooranjoyb/BeatBridge?style=for-the-badge" />
-   <img src="https://img.shields.io/github/issues/pooranjoyb/BeatBridge?style=for-the-badge" />
-   <img src="https://img.shields.io/github/issues-closed-raw/pooranjoyb/BeatBridge?style=for-the-badge" />
-    <img src="https://img.shields.io/github/license/pooranjoyb/BeatBridge?style=for-the-badge" />
-
-   <img src="https://img.shields.io/github/issues-pr/pooranjoyb/BeatBridge?style=for-the-badge" />
-    <img src="https://img.shields.io/github/contributors/pooranjoyb/BeatBridge?style=for-the-badge" />
-    <img src="https://img.shields.io/github/stars/pooranjoyb/BeatBridge?style=for-the-badge" />
-  
-   <img src="https://img.shields.io/github/issues-pr-closed-raw/pooranjoyb/BeatBridge?style=for-the-badge" />
-   <img src="https://img.shields.io/github/forks/pooranjoyb/BeatBridge?style=for-the-badge" />
-  <img src="https://img.shields.io/github/last-commit/pooranjoyb/BeatBridge?style=for-the-badge" />
+   <img src="https://img.shields.io/github/repo-size/pooranjoyb/BeatBridge" />
+   <img src="https://img.shields.io/github/issues/pooranjoyb/BeatBridge" />
+   <img src="https://img.shields.io/github/issues-closed-raw/pooranjoyb/BeatBridge" />
+    <img src="https://img.shields.io/github/license/pooranjoyb/BeatBridge" />
+   <img src="https://img.shields.io/github/issues-pr/pooranjoyb/BeatBridge" />
+    <img src="https://img.shields.io/github/contributors/pooranjoyb/BeatBridge " />
+    <img src="https://img.shields.io/github/stars/pooranjoyb/BeatBridge" />
+   <img src="https://img.shields.io/github/issues-pr-closed-raw/pooranjoyb/BeatBridge" />
+   <img src="https://img.shields.io/github/forks/pooranjoyb/BeatBridge" />
+  <img src="https://img.shields.io/github/last-commit/pooranjoyb/BeatBridge" />
   </div>
 
 <div align="center">
    
 #### Join Official Discord Server 
 
-<a href="https://discord.com/invite/PHRnze3W87"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"></a>
+<a href="https://discord.com/invite/PHRnze3W87"><img src="https://img.shields.io/badge/Discord-7289DA &logo=discord&logoColor=white"></a>
 
 </div>
 
-## Table of Contents
-- [BeatBridge Introduction](#beatbridge---a-music-player-with-a-recommendation-engine-🚀)
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Guidelines for Contributions](#guidelines-for-contributions)
-  - [Code of Conduct](#code-of-conduct)
-  - [License](#license)
-- [Our Contributors](#😍-our-valuable-contributors)
-
-# Features
+### Features
 
 - Utilizes Spotify API to fetch songs
 - Interactive GUI for playing music
 - Recommendation Engine for suggesting songs
 
-# Getting Started
+### Getting Started
 
 Follow the guidelines below to contribute to BeatBridge.
 
-## Guidelines for Contributions
+### Guidelines for Contributions
 
 - Ensure that your component is well-documented and follows best practices.
 - Use meaningful names for your components and keep the codebase clean and organized.
