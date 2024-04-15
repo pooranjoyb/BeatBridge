@@ -1,6 +1,5 @@
 import Player from "./Components/Player";
 import "./App.css";
-import axios from "axios";
 import { useEffect, useState } from "react";
 
 function App() {
