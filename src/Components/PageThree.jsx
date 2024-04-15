@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import page3 from "/pg3.png";
+import { useEffect, useRef } from "react";
+import page3 from "/githubIcon.png";
 import { motion, useAnimation } from "framer-motion";
 
 export default function PageThree() {
@@ -45,11 +45,11 @@ export default function PageThree() {
 
   return (
     <div
-      className="relative h-[800px] font-josh"
+      className="relative h-[800px] font-josh bg-[#2A2438]"
       style={{ overflow: "hidden" }}
       ref={sectionRef}
     >
-      <img src={page3} alt="bg img" className="absolute w-full" style={{ zIndex: 1 }} />
+
 
       <motion.div
         initial="hidden"
@@ -58,7 +58,7 @@ export default function PageThree() {
         variants={animationControls}
         transition={{ duration: 0.5 }}
         className="absolute mt-20"
-        style={{ zIndex: 2, top: "20%", left: "10%" }}
+        style={{ zIndex: 2, top: "20%", left: "10%", color: '#f3ead3', backgroundColor: '#2A2438' }}
       >
         <p
           style={{
@@ -89,7 +89,7 @@ export default function PageThree() {
             zIndex: 2,
             textAlign: "center",
             bottom: "-80%",
-            width: "275px",
+            maxWidth: "600px",
             height: "50px",
             borderRadius: "25px",
             display: "flex",
@@ -101,12 +101,22 @@ export default function PageThree() {
             rel="noreferrer"
             target="_blank"
             href="https://github.com/pooranjoyb/BeatBridge"
-            style={{ fontSize: "1.2vw", fontWeight: "600" }}
+            style={{ fontSize: "1.2vw", fontWeight: "600", padding: '2rem' }}
           >
             github.com/pooranjoyb/BeatBridge
           </a>
         </div>
       </motion.div>
+
+      <motion.img
+        initial="hidden"
+        animate={sectionControls}
+        exit="hidden"
+        variants={{
+          hidden: { opacity: 0, x: 500 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        src={page3} alt="bg img" className="absolute right-0 w-50 top-28" style={{ zIndex: 1, filter: 'invert(1)' }} />
     </div>
   );
 }

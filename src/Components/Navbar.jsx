@@ -19,13 +19,13 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="absolute inset-0 items-center text-center justify-center  ">
+            <div className="absolute inset-0 items-center text-center justify-center z-50">
                 <div className="pt-1 pb-1 flex flex-row justify-between">
                     <div className="mx-auto flex flex-row mb-2">
-                        <h1 className="font-normal text-4xl inline mt-1 ml-24 pr-2 text-black">
+                        <h1 className="font-normal text-4xl inline mt-1 ml-24 pr-2 text-[#f3ead3]">
                             BEAT{" "}
                         </h1>
-                        <h1 className="inline border-b-4 pt-2 font-serif tracking-tight border-black text-2xl text-black">
+                        <h1 className="inline border-b-4 pt-2 font-serif tracking-tight border-[#f3ead3] text-2xl text-[#f3ead3]">
                             Bridge
                         </h1>
                     </div>
@@ -43,13 +43,13 @@ export default function Navbar() {
             {
                 menuOpen && (
                     <div
-                        className="fixed inset-0 bg-gray-800 opacity-70 z-50  text-BLACK bg-[#2A2438] "
+                        className="fixed inset-0 opacity-70 z-50  text-BLACK bg-[#2A2438] "
                         onClick={closeMenu}
                     ></div>
                 )
             }
             <div
-                className={`fixed top-0 right-0 h-full w-64 bg-[#352f44] bg-white shadow-lg transform ${menuOpen ? "translate-x-0" : "translate-x-full"
+                className={`fixed top-0 right-0 h-full w-64 bg-[#352f44] shadow-lg transform ${menuOpen ? "translate-x-0" : "translate-x-full"
                     } transition-transform ease-in-out duration-300 z-50`}
             >
                 <div className="flex justify-end p-2 ">
@@ -74,7 +74,7 @@ export default function Navbar() {
                     </button>
                 </div>
 
-                <ul className="p-4 font-serif text-xl mb-4 text-BLACK bg-[##352f44]">
+                <ul className="p-4 font-serif text-xl mb-4 text-BLACK bg-[#352f44] text-[#f3ead3]">
                     <li className="py-2 pl-4 hover:bg-[#5c5470] cursor-pointer flex items-center">
                         <FaHome className="mr-2" />
                         Discover

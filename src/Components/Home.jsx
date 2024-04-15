@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Background from "/bag.jpg";
 import PageThree from "./PageThree";
@@ -57,30 +57,28 @@ export default function Home() {
           className="mt-[-2%] w-[100%]"
         />
       </div>
-      <div className="absolute inset-0 items-center text-center justify-center">
-        <Navbar />
-        <motion.div
-          initial="hidden"
-          variants={animationControls}
-          animate={sectionControls}
-          transition={{ duration: 0.5, delay: 0.25 }}
-          className="mt-48 text-[#000000]"
-        >
-          <p className="font-bold text-3xl tracking-tight">
-            Your Gateway to a World of Rhythm
-          </p>
-          <p className="text-8xl font-bold mt-1 tracking-tighter">
-            Welcome to BeatBridge!
-          </p>
-          <button className="rounded-full mt-20 font-bold bg-gradient-to-r from-[#2A2438] to-[#5C5470] px-6 py-2 shadow-xl hover:shadow-inner transition-all ease-in duration-200 text-2xl text-[#000000] tracking-wide">
-            Explore
-          </button>
-        </motion.div>
-      </div>
+      <Navbar />
+      <motion.div
+        initial="hidden"
+        variants={animationControls}
+        animate={sectionControls}
+        transition={{ duration: 0.5, delay: 0.25 }}
+        className=" absolute inset-0 items-center text-center justify-center mt-48 text-[#f3ead3] z-50"
+      >
+        <p className="font-bold text-3xl tracking-tight">
+          Your Gateway to a World of Rhythm
+        </p>
+        <p className="text-8xl font-bold mt-1 tracking-tighter">
+          Welcome to BeatBridge!
+        </p>
+        <button className="rounded-full mt-20 font-bold bg-gradient-to-r from-[#2A2438] to-[#5C5470] px-6 py-2 shadow-xl hover:shadow-inner transition-all ease-in duration-200 text-2xl text-[#f3ead3] tracking-wide">
+          Explore
+        </button>
+      </motion.div>
 
       <Features />
       <PageThree />
-      <Footer/>
+      <Footer />
     </>
   );
 }
