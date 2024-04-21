@@ -1,11 +1,11 @@
 import React from "react";
-import App from "./App.jsx";
 import Home from "./Components/Home.jsx";
 import ReactDOM from "react-dom/client";
 import SongSearch from "./Components/SongSearch.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import "./App.css";
+import Player from "./Components/Player.jsx";
 
 const MyApp = createBrowserRouter([
   {
@@ -14,7 +14,7 @@ const MyApp = createBrowserRouter([
   },
   {
     path: "/player",
-    element: <App />,
+    element: <Player />,
   },
   {
     path: "/search",
