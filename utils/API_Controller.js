@@ -31,6 +31,18 @@ class API_Controller {
         const data = await res.json();
         return data;
     }
+
+    getTrack = async(song, token) => {
+        const res = await fetch(song, {
+            method: 'GET',
+            headers:{
+                'Authorization': 'Bearer ' + token
+            },
+        });
+
+        const data = await res.json();
+        return data;
+    }
 }
 
 export default API_Controller;

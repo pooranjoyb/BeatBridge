@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import API_Controller from "../../utils/API_Controller";
 
@@ -13,22 +13,46 @@ const secret = import.meta.env.VITE_CLIENT_SECRET;
 export default function Player() {
   const location = useLocation();
   const navigatorData = location.state;
-  const [token, setToken] = useState('')
-
+  const [token, setToken] = useState('');
   const [songData, setSongData] = useState(null);
+  const audioRef = useRef(new Audio());
+
+  const user = new API_Controller(clientID, secret);
 
   useEffect(() => {
     setSongData(navigatorData);
+
+    const fetchData = async () => {
+      try {
+        const fetchedToken = await user.getToken();
+        setToken(fetchedToken);
+      } catch (error) {
+        console.error("Error fetching token:", error);
+      }
+    };
+
+    if (navigatorData) {
+      fetchData();
+    }
   }, [navigatorData]);
 
-
-  const user = new API_Controller(clientID, secret)
-
   useEffect(() => {
-    user?.getToken().then((data) => {
-      setToken(data)
-    })
-  }, [])
+    const playAudio = async () => {
+      try {
+        if (songData && token) {
+          const track = await user.getTrack(songData.href, token);
+          if (track.preview_url) {
+            audioRef.current.src = track.preview_url;
+            audioRef.current.play();
+          }
+        }
+      } catch (error) {
+        console.error("Error loading track:", error);
+      }
+    };
+
+    playAudio();
+  }, [songData, token]);
 
   return (
     <>
@@ -60,7 +84,7 @@ export default function Player() {
                   <div className="space-y-2">
                     <div className="relative">
                       <div className="bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
-                        <div className="bg-cyan-500 dark:bg-cyan-400 w-1/2 h-2" role="progressbar" aria-label="music progress" aria-valuenow="1456" aria-valuemin="0" aria-valuemax="4550"></div>
+                      <audio ref={audioRef} />
                       </div>
                       <div className="ring-cyan-500 dark:ring-cyan-400 ring-2 absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center bg-white rounded-full shadow">
                         <div className="w-1.5 h-1.5 bg-cyan-500 dark:bg-cyan-400 rounded-full ring-1 ring-inset ring-slate-900/5"></div>
