@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import API_Controller from "../../utils/API_Controller";
 
-import Navbar from "./Navbar";
+
 import Footer from "./Footer";
 import "../App.css";
 import Background from "/bag.jpg";
@@ -56,11 +56,12 @@ export default function Player() {
 
   return (
     <>
+    <h1>PLayer</h1>
       <div
         className="w-full bg-cover bg-center h-screen"
         style={{ backgroundImage: `url(${Background})` }}
       >
-        <Navbar />
+        {/* <Navbar /> */}
 
         {
           songData && token ? (

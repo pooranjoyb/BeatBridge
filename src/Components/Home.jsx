@@ -3,7 +3,6 @@ import { motion, useAnimation } from "framer-motion";
 import Background from "/bag.jpg";
 import PageThree from "./PageThree";
 import Features from "./Features";
-import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
@@ -48,7 +47,7 @@ export default function Home() {
 
   return (
     <>
-    <Navbar />
+    
       <div ref={sectionRef} className="bg-cover bg-center font-josh h-screen">
         <img
           src={Background}

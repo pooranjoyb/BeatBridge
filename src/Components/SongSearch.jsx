@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 // assets
 import Background from "/bag.jpg";
 import Search from '../assets/search.svg';
-import Navbar from "./Navbar";
+
 import Footer from "./Footer";
 import "../App.css";
 
@@ -28,6 +28,7 @@ export default function SongSearch() {
     }, [])
 
     useEffect(() => {
+        console.log("thissssssss");
         getTracks();
     }, [])
 
@@ -53,7 +54,7 @@ export default function SongSearch() {
                 className="w-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${Background})` }}
             >
-                <Navbar />
+
                 <div className="flex flex-col items-center justify-center min-h-screen w-full">
                     <div className="flex mt-16 justify-between bg-white rounded-full w-10/12 lg:w-2/3">
                         <input
