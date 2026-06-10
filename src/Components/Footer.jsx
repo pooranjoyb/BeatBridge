@@ -3,13 +3,14 @@ import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="h-16 flex justify-center items-center bg-gradient-to-r from-[#352F44] to-[#5C5470] text-[#f3ead3] text-2xl">
-
-      <Link to="https://github.com/pooranjoyb/BeatBridge" className="mr-2 hover:scale-125 ">
-        <FaGithub size={30} />
+    <div className="w-full h-16 flex justify-center items-center gap-4 bg-gradient-to-r from-[#352F44] to-[#5C5470] text-[#f3ead3] text-lg sm:text-2xl shadow-inner px-4 border-t border-white/5">
+      <Link
+        to="https://github.com/pooranjoyb/BeatBridge"
+        className="hover:scale-110 transition-transform p-1"
+      >
+        <FaGithub size={28} />
       </Link>
-      <div>&copy; 2023 BeatBridge</div>
-
+      <div className="tracking-wide font-light">&copy; 2023 BeatBridge</div>
     </div>
   );
 };

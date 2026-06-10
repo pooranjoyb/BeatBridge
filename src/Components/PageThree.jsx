@@ -4,30 +4,29 @@ import { motion, useAnimation } from "framer-motion";
 
 export default function PageThree() {
   const animationControls = {
-    hidden: { opacity: 0, x: -500 },
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
   };
 
   const sectionRef = useRef(null);
+  const sectionControls = useAnimation();
 
   useEffect(() => {
     const sectionObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // When the section is in the viewport, trigger the animation
-            animationControls.visible && sectionControls.start("visible");
+            sectionControls.start("visible");
           } else {
-            // When the section is out of the viewport, reset the animation
-            animationControls.hidden && sectionControls.start("hidden");
+            sectionControls.start("hidden");
           }
         });
       },
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.5, // Adjust the threshold as needed
-      }
+        threshold: 0.2,
+      },
     );
 
     if (sectionRef.current) {
@@ -39,84 +38,57 @@ export default function PageThree() {
         sectionObserver.unobserve(sectionRef.current);
       }
     };
-  }, []);
-
-  const sectionControls = useAnimation();
+  }, [sectionControls]);
 
   return (
     <div
-      className="relative h-[800px] bg-[#2A2438]"
-      style={{ overflow: "hidden" }}
+      className="relative min-h-[600px] bg-[#2A2438] flex flex-col lg:flex-row items-center justify-center px-6 py-16 overflow-hidden max-w-7xl mx-auto w-full"
       ref={sectionRef}
     >
-
-
       <motion.div
         initial="hidden"
         animate={sectionControls}
-        exit="hidden"
         variants={animationControls}
         transition={{ duration: 0.5 }}
-        className="absolute mt-20"
-        style={{ zIndex: 2, top: "20%", left: "10%", color: '#f3ead3', backgroundColor: '#2A2438' }}
+        className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left z-10 text-[#f3ead3]"
       >
-        <p
-          style={{
-            fontSize: "5vw",
-            fontWeight: "600",
-            lineHeight: "70px",
-            textAlign: "center",
-          }}
-        >
+        <h2 className="text-4xl sm:text-6xl font-bold leading-tight mb-2">
           Wanna
-        </p>
-        <p style={{ fontSize: "5vw", fontWeight: "600", lineHeight: "70px" }}>
+        </h2>
+        <h2 className="text-4xl sm:text-6xl font-bold leading-tight text-cyan-400 mb-2">
           Contribute to
-        </p>
-        <p
-          style={{
-            fontSize: "5vw",
-            fontWeight: "600",
-            lineHeight: "70px",
-            textAlign: "center",
-          }}
-        >
+        </h2>
+        <h2 className="text-4xl sm:text-6xl font-bold leading-tight mb-6">
           BeatBridge?
-        </p>
-        <div
-          className="absolute bg-gradient-to-r from-[#2A2438] to-[#5C5470] "
-          style={{
-            zIndex: 2,
-            textAlign: "center",
-            bottom: "-80%",
-            maxWidth: "600px",
-            height: "50px",
-            borderRadius: "25px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        </h2>
+
+        <div className="bg-gradient-to-r from-[#2A2438] to-[#5C5470] p-[2px] rounded-full shadow-lg max-w-md w-full">
           <a
             rel="noreferrer"
             target="_blank"
             href="https://github.com/pooranjoyb/BeatBridge"
-            style={{ fontSize: "1.2vw", fontWeight: "600", padding: '2rem' }}
+            className="block text-center bg-[#2A2438] hover:bg-transparent transition-colors py-3 px-6 rounded-full text-sm sm:text-lg font-semibold tracking-wide border border-[#f3ead3]/10 text-[#f3ead3]"
           >
             github.com/pooranjoyb/BeatBridge
           </a>
         </div>
       </motion.div>
 
-      <motion.img
+      <motion.div
         initial="hidden"
         animate={sectionControls}
-        exit="hidden"
         variants={{
-          hidden: { opacity: 0, x: 500 },
-          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, scale: 0.8 },
+          visible: { opacity: 0.2, scale: 1, transition: { duration: 0.5 } },
         }}
-        src={page3} alt="bg img" className="absolute right-0 w-50 top-28" style={{ zIndex: 1, filter: 'invert(1)' }} />
+        className="absolute lg:relative w-72 h-72 sm:w-96 sm:h-96 lg:w-1/2 flex items-center justify-center opacity-20 lg:opacity-100 z-0 lg:z-10 mt-8 lg:mt-0"
+      >
+        <img
+          src={page3}
+          alt="bg img"
+          className="w-full h-full object-contain filter invert max-w-[300px] sm:max-w-none"
+        />
+      </motion.div>
     </div>
   );
 }
